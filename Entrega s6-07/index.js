@@ -2,7 +2,6 @@
 function add(n1,n2){
     return n1 + n2 ;
 }
-
 //.kata2
 function multiply(num1,num2){
     let resultado = 0;
@@ -11,18 +10,29 @@ function multiply(num1,num2){
     }
     return resultado
 }
-
 //.kata3
 function power(x,n){
-    let resultado = ;
+    let resultado = 1 ;
     for(let i =0;i<n;i++){
-    resultado = resultado + x**n
+    resultado = resultado * multiply(x,1)
     }
-    console.log(resultado)
-
 }
-let test = power(5,3)
-console.log(test)
+//.kata4
+function factorial(z){
+    let resultado = []
+    for(let i = 0;i<=z;i++){
+        resultado.push(i)
+
+    }
+    let factorial = 1
+    for(let i = 1;i<resultado.length;i++){
+        factorial = factorial *[i] 
+
+    }
+return factorial
+}
+
+
 
 
 
