@@ -1,0 +1,6 @@
+test(4);i;i<=z;resultado
+;1;true;i*resultado=1
+;2;true;i*1=2
+;3;true;i*2=6
+;4;true;i*6=24
+;5;false;24

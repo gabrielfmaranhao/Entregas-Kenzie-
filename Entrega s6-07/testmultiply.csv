@@ -1,0 +1,6 @@
+teste(4,3);i;i<=num2;resultado;
+;1;true;num1+resultado=3;
+;2;true;num1+3=6;
+;3;true;num1+6=9;
+;4;true;num1+9=12;
+;5;false;12;

@@ -1,0 +1,5 @@
+teste(5,3;i;i<n;resultado
+;0;true;5
+;1;true;resultadox5=25
+;2;true;resultadox5=125
+;3;false;125
