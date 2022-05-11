@@ -1,0 +1,17 @@
+#box { 
+    width: 100px; 
+    height: 100px;
+    position: absolute; 
+    background: gray; 
+    left: 200px; 
+    top: 200px; 
+}
+figure{
+display: flex;   
+margin-top: none;
+}
+#carro{
+    max-width: 100px;
+    max-height: 100px;
+
+}

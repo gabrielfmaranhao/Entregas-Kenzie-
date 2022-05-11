@@ -1,0 +1,31 @@
+h1{
+    size: 20px;
+    justify-content: center;
+    display: flex;
+    font-size: 80px;
+}
+ul{
+    padding-left: 250px;
+}
+
+li{
+    background-color: orange;
+    border-radius: 5px;
+    list-style: none;
+    display: flex;
+    padding: 15px;
+    margin: 20px 250px 20px 250px;
+    color: black;
+    font-size: 30px;
+    font-style: oblique;
+    justify-content: space-around;
+    width: 500px;
+    
+    
+}
+button{
+display: flex;
+padding: 8px;
+border-radius: 17px;
+
+}
