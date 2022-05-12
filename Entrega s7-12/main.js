@@ -39,24 +39,24 @@ main.appendChild(produtsDetails);
 
 function interaçãoComLi(produts){
     produts.forEach((produto) => {
-    const produtoLi = document.createElement("li");
+        const produtoLi = document.createElement("li");
 
-    produtoLi.innerText = `${produto.nome} ${produto.preco}`;
+        produtoLi.innerText = `${produto.nome} ${produto.preco}`;
 
-    const button     = document.createElement("button");
-    button.id = `${produto.nome}`;
-    produtoLi.appendChild(button);
+        const button     = document.createElement("button");
+        button.id = `${produto.nome}`;
+        produtoLi.appendChild(button);
 
-    
+        
 
-    button.innerText="Adicionar ao total";
+        button.innerText="Adicionar ao total";
 
-    produtsDetails.appendChild(produtoLi)
-    button.addEventListener("click",test)
-    function test(){
-        soma=soma+produto.preco
-        atualizacao();
-        }
+        produtsDetails.appendChild(produtoLi)
+        button.addEventListener("click",test)
+        function test(){
+            soma=soma+produto.preco
+            atualizacao();
+            }
     
     });
     
