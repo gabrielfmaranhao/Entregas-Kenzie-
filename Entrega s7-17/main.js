@@ -62,6 +62,27 @@ const produtos =[
         image:"./imagens/sabonete.jpg",
         imgDescricao:"Sabonete"
     },
+    {
+        nome:"Pêra",
+        preco:9.99,
+        categoria:"frutas",
+        image:undefined,
+        imgDescricao:"Pêra"
+    },
+    {
+        nome:"Agua",
+        preco:5.99,
+        categoria:"bebidas",
+        image:undefined,
+        imgDescricao:"Agua"
+    },
+    {
+        nome:"Condicionador",
+        preco:4.99,
+        categoria:"higiene",
+        image:undefined,
+        imgDescricao:"Condicionador"
+    }
 ]
 for(let i =0;i<produtos.length;i++){
     if(produtos[i].image == undefined){
@@ -71,6 +92,8 @@ for(let i =0;i<produtos.length;i++){
 const body   = document.body;
 
 const section = document.getElementsByTagName("section");
+
+
 function CriarUl(sessao){
     for(let i =0;i<sessao.length;i++){
         const ul = document.createElement("ul");
@@ -85,6 +108,8 @@ CriarUl(section)
 const ul0 = document.getElementById("ul0");
 const ul1 = document.getElementById("ul1");
 const ul2 = document.getElementById("ul2")
+
+
 function criarLi(produtos){
     for(let i = 0;i<produtos.length;i++){
         
