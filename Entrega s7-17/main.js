@@ -90,20 +90,43 @@ for(let i =0;i<produtos.length;i++){
     }
 }
 const body   = document.body;
+const main   = document.createElement("main");
+body.appendChild(main);
 
-const section = document.getElementsByTagName("section");
+const h1     =document.createElement("h1");
+h1.innerText = "Mercadinho Kenzie";
+h1.id        = "titulo";
+main.appendChild(h1);
+
+const sectionFrutas        = document.createElement("section");
+sectionFrutas.className    = "sessaoprodutos";
+sectionFrutas.id           = "frutas";
+main.appendChild(sectionFrutas);
+
+const sectionBebidas       = document.createElement("section");
+sectionBebidas.className   = "sessaoprodutos";
+sectionBebidas.id          = "bebidas";
+main.appendChild(sectionBebidas); 
+
+const sectionHigiene       = document.createElement("section");
+sectionHigiene.className   = "sessaoprodutos";
+sectionHigiene.id          = "higiene" ;
+main.appendChild(sectionHigiene);
+
+const sections = document.getElementsByTagName("section");
+
 
 
 function CriarUl(sessao){
     for(let i =0;i<sessao.length;i++){
         const ul = document.createElement("ul");
         ul.id=`ul${i}`
-        section[i].appendChild(ul);
+        sections[i].appendChild(ul);
     
         
     }    
 }
-CriarUl(section)
+CriarUl(sections)
 
 const ul0 = document.getElementById("ul0");
 const ul1 = document.getElementById("ul1");
@@ -114,54 +137,78 @@ function criarLi(produtos){
     for(let i = 0;i<produtos.length;i++){
         
         if(produtos[i].categoria =="frutas"){
-            const produtoli = document.createElement("li");
-            const h2        = document.createElement("h2");
-            h2.innerText    =`${produtos[i].nome}`;
-            const p         =document.createElement("p");
-            p.innerText     =`${produtos[i].categoria}`
-            const preco     = document.createElement("p");
-            preco.innerText=`${produtos[i].preco}`;
-            const img       = document.createElement("img");
-            img.src         = `${produtos[i].image}`
-            img.alt         = `${produtos[i].imgDescricao}`
+            const produtoli      = document.createElement("li");
+            produtoli.className  = "produto";
+            const produtomain    = document.createElement("main");
+            produtomain.className= "produto-main";
+            const h1             = document.createElement("h1");
+            h1.innerText         =`${produtos[i].nome}`;
+            h1.className         ="produto-title"
+            const h5             = document.createElement("h5");
+            h5.innerText         =`${produtos[i].categoria}`;
+            h5.className         = "produto-category";
+            const strongPreco    = document.createElement("strong");
+            strongPreco.innerText=`${produtos[i].preco}`;
+            strongPreco.className= "produto-price"
+            const img            = document.createElement("img");
+            img.className        = "produto-img"
+            img.src              = `${produtos[i].image}`;
+            img.alt              = `${produtos[i].imgDescricao}`;
             produtoli.appendChild(img)
-            produtoli.appendChild(h2)
-            produtoli.appendChild(p)
-            produtoli.appendChild(preco)
+            produtoli.appendChild(produtomain)
+            produtomain.appendChild(h1)
+            produtomain.appendChild(h5)
+            produtomain.appendChild(strongPreco)
             ul0.appendChild(produtoli)
         }
         if(produtos[i].categoria =="bebidas"){
-            const produtoli = document.createElement("li");
-            const h2        = document.createElement("h2");
-            h2.innerText    =`${produtos[i].nome}`;
-            const p         =document.createElement("p");
-            p.innerText     =`${produtos[i].categoria}`
-            const preco     = document.createElement("p");
-            preco.innerText=`${produtos[i].preco}`;
-            const img       = document.createElement("img");
-            img.src         = `${produtos[i].image}`
-            img.alt         = `${produtos[i].imgDescricao}`
+            const produtoli      = document.createElement("li");
+            produtoli.className  = "produto";
+            const produtomain    = document.createElement("main");
+            produtomain.className= "produto-main";
+            const h1             = document.createElement("h1");
+            h1.innerText         =`${produtos[i].nome}`;
+            h1.className         ="produto-title"
+            const h5             = document.createElement("h5");
+            h5.innerText         =`${produtos[i].categoria}`;
+            h5.className         = "produto-category";
+            const strongPreco    = document.createElement("strong");
+            strongPreco.innerText=`${produtos[i].preco}`;
+            strongPreco.className= "produto-price"
+            const img            = document.createElement("img");
+            img.className        = "produto-img"
+            img.src              = `${produtos[i].image}`;
+            img.alt              = `${produtos[i].imgDescricao}`;
             produtoli.appendChild(img)
-            produtoli.appendChild(h2)
-            produtoli.appendChild(p)
-            produtoli.appendChild(preco)
+            produtoli.appendChild(produtomain)
+            produtomain.appendChild(h1)
+            produtomain.appendChild(h5)
+            produtomain.appendChild(strongPreco)
             ul1.appendChild(produtoli)
         }
         if(produtos[i].categoria =="higiene"){
-            const produtoli = document.createElement("li");
-            const h2        = document.createElement("h2");
-            h2.innerText    =`${produtos[i].nome}`;
-            const p         =document.createElement("p");
-            p.innerText     =`${produtos[i].categoria}`
-            const preco     = document.createElement("p");
-            preco.innerText=`${produtos[i].preco}`;
-            const img       = document.createElement("img");
-            img.src         = `${produtos[i].image}`
-            img.alt         = `${produtos[i].imgDescricao}`
+            const produtoli      = document.createElement("li");
+            produtoli.className  = "produto";
+            const produtomain    = document.createElement("main");
+            produtomain.className= "produto-main";
+            const h1             = document.createElement("h1");
+            h1.innerText         =`${produtos[i].nome}`;
+            h1.className         ="produto-title"
+            const h5             = document.createElement("h5");
+            h5.innerText         =`${produtos[i].categoria}`;
+            h5.className         = "produto-category";
+            const strongPreco    = document.createElement("strong");
+            strongPreco.innerText=`${produtos[i].preco}`;
+            strongPreco.className= "produto-price"
+            const img            = document.createElement("img");
+            img.className        = "produto-img"
+            img.src              = `${produtos[i].image}`;
+            img.alt              = `${produtos[i].imgDescricao}`;
             produtoli.appendChild(img)
-            produtoli.appendChild(h2)
-            produtoli.appendChild(p)
-            produtoli.appendChild(preco)
+            produtoli.appendChild(produtomain)
+            produtomain.appendChild(h1)
+            produtomain.appendChild(h5)
+            produtomain.appendChild(strongPreco)
             ul2.appendChild(produtoli)
         }
     }
